@@ -299,37 +299,14 @@ section { padding: 120px 0; position: relative; }
 .message-video {
   max-width: 780px; margin: 32px auto 40px;
 }
-.video-thumb-link { display: block; text-decoration: none; }
-.video-thumb-wrapper {
-  position: relative;
+.video-wrapper {
+  position: relative; padding-bottom: 56.25%; height: 0;
   border-radius: var(--radius); overflow: hidden;
-  border: 1px solid var(--border);
   box-shadow: 0 8px 40px rgba(0,0,0,0.4);
-  transition: transform 0.3s, box-shadow 0.3s;
 }
-.video-thumb-wrapper:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 50px rgba(255,87,87,0.25);
-}
-.video-thumb-img {
-  width: 100%; display: block;
-  aspect-ratio: 16 / 9; object-fit: cover;
-}
-.video-play-btn {
-  position: absolute; top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80px; height: 80px; border-radius: 50%;
-  background: rgba(255,87,87,0.9);
-  display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 0 30px rgba(255,87,87,0.4);
-  transition: transform 0.2s, background 0.2s;
-}
-.video-thumb-wrapper:hover .video-play-btn {
-  transform: translate(-50%, -50%) scale(1.1);
-  background: rgba(255,87,87,1);
-}
-.video-play-btn .material-icons {
-  font-size: 40px; color: #fff; margin-left: 4px;
+.video-wrapper iframe {
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 100%;
 }
 
 /* ===== VISION ===== */
@@ -717,14 +694,9 @@ footer {
     <h2 class="section-title fi delay-1">この勉強会に<span class="accent">込めた想い</span></h2>
     <!-- 動画埋め込み: YouTubeのURLをここに設定 -->
     <div class="message-video fi delay-2">
-      <a href="https://www.youtube.com/watch?v=gqVoHK0mcYM" target="_blank" rel="noopener" class="video-thumb-link">
-        <div class="video-thumb-wrapper">
-          <img src="https://img.youtube.com/vi/gqVoHK0mcYM/maxresdefault.jpg" alt="メッセージ動画" class="video-thumb-img">
-          <div class="video-play-btn">
-            <span class="material-icons">play_arrow</span>
-          </div>
-        </div>
-      </a>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/gqVoHK0mcYM" title="メッセージ動画" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
     </div>
     <div class="message-box fi delay-3">
       <p class="message-quote">正直、厳しいメッセージだと思います。でも厳しい現実をオブラートに包んで甘くお伝えすることは、見過ごすことと同じだと思っています。<br><br><strong>誰1人、取りこぼしたくない。</strong><br><br>AIスキルは未来のキャリアを作るパスポートです。使う前と使った後では、自分自身の市場価値が変わっている。それに気づいた人から、景色が変わり始める。<br><br>だからこそ、この勉強会は<strong>自分ごと</strong>として取り組んでほしい。一緒に、圧倒的な成果を実現していきましょう。</p>
@@ -905,19 +877,15 @@ footer {
     <div class="join-box glow-card fi delay-2">
       <div>
         <h3>実践編への参加条件</h3>
-        <p>基礎編で土台を作った人だけが進める、次のステージ。<br>やることはシンプルです。</p>
+        <p>基礎編全8回の宿題とアンケートを全て提出した人だけが進める、次のステージです。</p>
         <ul class="join-checklist">
           <li>
             <span class="material-icons">check_circle</span>
-            各回の宿題を提出する
+            全8回の宿題を提出する
           </li>
           <li>
             <span class="material-icons">check_circle</span>
-            アンケートに回答する
-          </li>
-          <li>
-            <span class="material-icons">check_circle</span>
-            専用チャンネルで学びを共有する
+            全8回のアンケートに回答する
           </li>
         </ul>
         <a href="https://sites.google.com/10xc.jp/claude-code/%E3%83%9B%E3%83%BC%E3%83%A0" target="_blank" rel="noopener" class="join-cta-btn">
